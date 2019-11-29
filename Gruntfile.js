@@ -306,10 +306,10 @@ module.exports = function(grunt) {
         },
         command: [
           './node_modules/.bin/web-ext build -s=' + path.build + ' -a=' + path.dist_firefox + '  -o=true',
-          'mv '+ path.dist_firefox + pkg.name + '-' + pkg.version + '.zip ' + path.dist_firefox + 'passbolt-' + pkg.version + '-debug.zip',
-          'rm -f '+ path.dist_firefox + 'passbolt-latest@passbolt.com.zip',
-          'ln -fs passbolt-' + pkg.version + '-debug.zip ' + path.dist_firefox + 'passbolt-latest@passbolt.com.zip',
-          "echo '\nMoved to " + path.dist_firefox + "passbolt-" + pkg.version + "-debug.zip'"
+          'mv '+ path.dist_firefox + pkg.name + '-' + pkg.version + '.zip ' + path.dist_firefox + 'passlite-' + pkg.version + '-debug.zip',
+          'rm -f '+ path.dist_firefox + 'passlite-latest@devture.com.zip',
+          'ln -fs passlite-' + pkg.version + '-debug.zip ' + path.dist_firefox + 'passlite-latest@devture.com.zip',
+          "echo '\nMoved to " + path.dist_firefox + "passlite-" + pkg.version + "-debug.zip'"
         ].join(' && ')
       },
       build_firefox_prod: {
@@ -318,8 +318,8 @@ module.exports = function(grunt) {
         },
         command: [
           './node_modules/.bin/web-ext build -s='+ path.build + ' -a='+ path.dist_firefox + '  -o=true',
-          'mv '+ path.dist_firefox + pkg.name + '-' + pkg.version + '.zip ' + path.dist_firefox + '/passbolt-' + pkg.version + '.zip',
-          "echo '\nMoved to " + path.dist_firefox + "passbolt-" + pkg.version + ".zip'"
+          'mv '+ path.dist_firefox + pkg.name + '-' + pkg.version + '.zip ' + path.dist_firefox + '/passlite-' + pkg.version + '.zip',
+          "echo '\nMoved to " + path.dist_firefox + "passlite-" + pkg.version + ".zip'"
         ].join(' && ')
       },
 
@@ -331,9 +331,9 @@ module.exports = function(grunt) {
           stderr: false
         },
         command: [
-          './node_modules/.bin/crx pack ' + path.build + ' -p key.pem -o ' + path.dist_chrome + 'passbolt-' + pkg.version + '-debug.crx',
-          'rm -f '+ path.dist_chrome + 'passbolt-latest@passbolt.com.crx',
-          'ln -fs passbolt-' + pkg.version + '-debug.crx ' + path.dist_chrome + 'passbolt-latest@passbolt.com.crx'
+          './node_modules/.bin/crx pack ' + path.build + ' -p key.pem -o ' + path.dist_chrome + 'passlite-' + pkg.version + '-debug.crx',
+          'rm -f '+ path.dist_chrome + 'passlite-latest@devture.com.crx',
+          'ln -fs passlite-' + pkg.version + '-debug.crx ' + path.dist_chrome + 'passlite-latest@devture.com.crx'
         ].join(' && ')
       },
       build_chrome_prod: {
@@ -341,8 +341,8 @@ module.exports = function(grunt) {
           stderr: false
         },
         command: [
-          'zip -q -1 -r ' + path.dist_chrome + 'passbolt-' + pkg.version + '.zip ' + path.build,
-          './node_modules/.bin/crx pack ' + path.build + ' -p key.pem -o ' + path.dist_chrome + 'passbolt-' + pkg.version + '.crx ',
+          'zip -q -1 -r ' + path.dist_chrome + 'passlite-' + pkg.version + '.zip ' + path.build,
+          './node_modules/.bin/crx pack ' + path.build + ' -p key.pem -o ' + path.dist_chrome + 'passlite-' + pkg.version + '.crx ',
           "echo '\nZip and Crx files generated in " + path.dist_chrome + "'"
         ].join(' && ')
       }
