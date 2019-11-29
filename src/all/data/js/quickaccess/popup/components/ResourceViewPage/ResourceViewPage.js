@@ -206,32 +206,6 @@ class ResourceViewPage extends React.Component {
             }
           </li>
           <li className="property">
-            <a role="button" className="button button-icon property-action" onClick={this.handleCopyPasswordClick} title="copy to clipboard">
-              <span className="fa icon">
-                <Transition in={this.state.copySecretState == "default"} appear={false} timeout={500}>
-                  {(status) => (
-                    <svg className={`transition fade-${status} ${this.state.copySecretState != "default" ? "visually-hidden" : ""}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M336 64h-80c0-35.29-28.71-64-64-64s-64 28.71-64 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h42v36c0 6.627 5.373 12 12 12h168c6.627 0 12-5.373 12-12v-36h42a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zM192 40c13.255 0 24 10.745 24 24s-10.745 24-24 24-24-10.745-24-24 10.745-24 24-24" /></svg>
-                  )}
-                </Transition>
-                <Transition in={this.state.copySecretState == "processing"} appear={true} timeout={500}>
-                  {(status) => (
-                    <svg className={`fade-${status} ${this.state.copySecretState != "processing" ? "visually-hidden" : ""}`} width="22px" height="22px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><g stroke="none" fill="none" ><g id="loading_white" transform="translate(2, 2)" strokeWidth="4"><circle id="Oval" stroke="#CCC" cx="9" cy="9" r="9" /></g><g id="loading_white" transform="translate(2, 2)" strokeWidth="2"><path d="M18,9 C18,4.03 13.97,0 9,0" id="Shape" stroke="#000"><animateTransform attributeName="transform" type="rotate" from="0 9 9" to="360 9 9" dur="0.35s" repeatCount="indefinite" /></path></g></g></svg>
-                  )}
-                </Transition>
-                <Transition in={this.state.copySecretState == "done"} appear={true} timeout={500}>
-                  {(status) => (
-                    <svg className={`fade-${status} ${this.state.copySecretState != "done" ? "visually-hidden" : ""}`} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" /></svg>
-                  )}
-                </Transition>
-              </span>
-              <span className="visually-hidden">Copy to clipboard</span>
-            </a>
-            <span className="property-name">Password</span>
-            <a href="#" role="button" className="secret-copy property-value" onClick={this.handleCopyPasswordClick}>
-              <span className="visually-hidden">Copy to clipboard</span>
-            </a>
-          </li>
-          <li className="property">
             <a href={`${sanitizeResourceUrl ? sanitizeResourceUrl : "#"}`} role="button" className={`button button-icon property-action ${!sanitizeResourceUrl ? "disabled" : ""}`}
               onClick={this.handleGoToUrlClick} target="_blank" rel="noopener noreferrer" title="open in a new tab">
               <span className="fa icon">
