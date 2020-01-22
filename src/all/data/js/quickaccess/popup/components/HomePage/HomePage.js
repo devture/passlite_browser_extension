@@ -165,7 +165,7 @@ class HomePage extends React.Component {
     const isReady = this.state.resources !== null;
     const showSuggestedSection = !this.context.search.length;
     const showBrowsedResourcesSection = this.context.search.length > 0;
-    const showFiltersSection = !this.context.search.length;
+    const showFiltersSection = false;
     const isProEdition = this.context.siteSettings && this.context.siteSettings.passbolt.edition === "pro";
     let browsedResources, suggestedResources;
 
