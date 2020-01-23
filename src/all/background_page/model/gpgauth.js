@@ -84,6 +84,9 @@ GpgAuth.prototype.verify = async function (serverUrl, armoredServerKey, userFing
   // Send the data
   let fetchOptions = {
     method: 'POST',
+    headers: {
+      'X-Passlite': '1'
+    },
     credentials: 'include',
     body: data
   };
@@ -121,6 +124,9 @@ GpgAuth.prototype.getServerKey = async function (serverUrl) {
   let domain = serverUrl || this.getDomain();
   const response = await fetch(domain + URL_VERIFY, {
     method: 'GET',
+    headers: {
+      'X-Passlite': '1'
+    },
     credentials: 'include'
   });
 
