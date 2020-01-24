@@ -14,6 +14,8 @@ module.exports = function(grunt) {
   var path = {
     node_modules: 'node_modules/',
 
+    assets: 'assets/',
+
     build: 'build/all/',
     build_data: 'build/all/data/',
     build_vendors: 'build/all/vendors/',
@@ -218,14 +220,14 @@ module.exports = function(grunt) {
         }, {
           // Icons / logo
           nonull: true,
-          cwd: path.node_modules + 'passbolt-styleguide/src/img/logo',
+          cwd: path.assets + 'logo',
           src: ['icon-19.png', 'icon-20_white.png', 'icon-48.png', 'icon-48_white.png', 'logo.png', 'logo@2x.png', 'logo.svg'],
           dest: path.build_data + 'img/logo',
           expand: true
         }, {
           // Branding
           nonull: true,
-          cwd: path.node_modules + 'passbolt-styleguide/src/img/logo',
+          cwd: path.assets + 'icons',
           src: ['icon-16.png', 'icon-19.png', 'icon-32.png', 'icon-48.png', 'icon-64.png', 'icon-128.png'],
           dest: path.build + 'icons',
           expand: true
