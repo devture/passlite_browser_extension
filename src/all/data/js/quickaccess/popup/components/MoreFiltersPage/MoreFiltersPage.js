@@ -71,11 +71,6 @@ class MoreFiltersPage extends React.Component {
             </li>
           </ul>
         </div>
-        <div className="submit-wrapper">
-          <Link to="/data/quickaccess/resources/create" id="popupAction" className="button primary big full-width" role="button">
-            create new
-          </Link>
-        </div>
       </div>
     );
   }

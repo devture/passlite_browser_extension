@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Passbolt Extension",
-  "short_name": "passbolt",
+  "name": "Passlite Extension",
+  "short_name": "passlite",
   "version": "2.12.1",
-  "description": "Passbolt extension for the open source password manager for teams.",
+  "description": "Passlite extension for the open source password manager for teams.",
   "applications": {
     "gecko": {
-      "id": "passbolt@passbolt.com"
+      "id": "passlite@devture.com"
     }
   },
   "icons": {
@@ -24,16 +24,16 @@
         "dark": "icons/icon-32.png",
         "size": 32
     }],
-    "default_title": "Passbolt Quickaccess",
+    "default_title": "Passlite Quickaccess",
     "default_popup": "data/quickaccess.html"
   },
   "commands": {
-    "passbolt-open": {
+    "passlite-open": {
       "suggested_key": {
         "default": "Alt+Shift+P",
         "mac": "Alt+Shift+P"
       },
-      "description": "Open passbolt in a new tab!"
+      "description": "Open passlite in a new tab!"
     }
   },
   "permissions": [

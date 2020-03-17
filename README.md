@@ -1,3 +1,28 @@
+# Passlite
+
+Passlite is a browser addon, which is a **fork** of the [Passbolt](https://github.com/passbolt/passbolt_browser_extension) browser addon.
+
+The goal is to have an addon, which is more suitable for a managed (corporate) environment,
+in which users do not create and manage passwords by themselves, but rather just use whatever is shared with them.
+
+The following changes have been made compared to the original Passbolt addon:
+
+- logos and names have been changed to prevent confusion with the original Passbolt addon. We'd like to credit Passbolt immensely for the great work that they've done, but we don't want to detract from their brand or cause confusion. Passlite is mostly compatible, but it's not Passbolt.
+
+- some filtering features (by group, Favorites, etc.) have been removed to simplify the UI. Only the "Shared with me" filter has been preserved.
+
+- "create new password" and "copy password" functionality has been removed
+
+- a `X-Passlite: 1` HTTP header is sent during initial `/auth/verify.json` setup requests to signify that it's the Passlite fork that is making the request. It's up to the server to make or not make use of this header.
+
+- a `Makefile` has been added, to make it simpler to publish source code
+
+This addon can work with the original and default [Passbolt API server](https://github.com/passbolt/passbolt_api).
+
+The original Passbolt README follows below.
+
+-------------------------------------------------------------------------
+
 	      ____                  __          ____
 	     / __ \____  _____ ____/ /_  ____  / / /_
 	    / /_/ / __ `/ ___/ ___/ __ \/ __ \/ / __/
