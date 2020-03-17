@@ -44,5 +44,11 @@
   ],
   "web_accessible_resources": [
     "data/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://accounts.google.com/*"],
+      "css": ["content_scripts/css/gsuite_hide_show_password_button.css"]
+    }
   ]
 }
