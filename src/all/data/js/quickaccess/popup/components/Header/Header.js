@@ -22,9 +22,7 @@ class Header extends React.Component {
     return (
       <div className="quickaccess-header">
         <h1 className="logo">
-          <a href={this.context.user ? this.context.user["user.settings.trustedDomain"] : "#"} target="_blank" rel="noopener noreferrer" title="open passbolt in a new tab">
-            <span className="visually-hidden">Passbolt</span>
-          </a>
+          <span className="visually-hidden">Passbolt</span>
         </h1>
         {this.context.isAuthenticated &&
           <a role="button" className={`option-link button button-icon`} onClick={this.handleLogoutClick} title="logout">
